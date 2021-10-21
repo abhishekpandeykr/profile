@@ -21,7 +21,9 @@ export default function Home() {
     <div>
       <Navbar />
       <Content />
+      <div className="gradient"></div>
       <ContactMe />
+      <div className="gradient"></div>
       <Footer />
     </div>
   );

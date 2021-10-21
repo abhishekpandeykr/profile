@@ -7,13 +7,14 @@ const Content = () => {
       </p>
       <h2>I create Web</h2>{" "}
       <p>
-        I'm a Software Engineer with 5 years of Experience mostly in Frontend
-        Development. Currently I'm working with{" "}
+        Innovative Front End Developer with half Decade of Experience Building
+        and Mantaining CMS and Web Applications. Currently I'm using this
+        Experince and skill to use in{" "}
         <a href="www.one.com" target="_blank">
           {" "}
           One.com
         </a>{" "}
-        to make thier mail top end notch is UI.
+        for Mailing System Part.
       </p>
     </section>
   );
