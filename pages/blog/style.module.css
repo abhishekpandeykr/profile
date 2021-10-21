@@ -1,0 +1,9 @@
+.coming-soon {
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

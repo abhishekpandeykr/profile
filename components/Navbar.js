@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faJs } from "@fortawesome/free-brands-svg-icons";
+// import Link fron 'ne'
+import Link from "next/link";
 import { SocialLinks } from "../socialLinks";
 
 export default function Navbar() {
@@ -9,12 +11,18 @@ export default function Navbar() {
       <ul>
         <li>
           <h1>
-            <FontAwesomeIcon icon={faCode} />
-            Abhishek Kumar Pandey
+            <Link href="/">
+              <a href="#">
+                <FontAwesomeIcon icon={faCode} />
+                Abhishek Kumar Pandey
+              </a>
+            </Link>
           </h1>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <Link href="/blog">
+            <a href="#">Blog</a>
+          </Link>
         </li>
         <li>
           <a href="#">About</a>

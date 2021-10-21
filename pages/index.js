@@ -19,12 +19,10 @@ const postsQuery = `*[_type=="post"]{
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Content />
       <div className="gradient"></div>
       <ContactMe />
       <div className="gradient"></div>
-      <Footer />
     </div>
   );
 }
