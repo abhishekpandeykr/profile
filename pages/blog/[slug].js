@@ -8,20 +8,21 @@ const blogQuery = `*[_type=="post" && slug.current == $slug][0]{
 }`;
 
 const formatDate = (date) => {
-  const newDate = new Date(date.toString());
-  return `${newDate.getDate()}/${newDate.getMonth()}/${newDate.getFullYear()}`;
+  if (date) {
+    const newDate = new Date(date.toString());
+    return `${newDate.getDate()}/${newDate.getMonth()}/${newDate.getFullYear()}`;
+  }
 };
 export default function PostById({ curretBlog }) {
-  console.log(curretBlog);
   return (
     <div className={styles.singlePost}>
-      <h3 className={styles.title}>{curretBlog.title}</h3>
+      <h3 className={styles.title}>{curretBlog?.title}</h3>
       <p className={styles.body}>
-        <PortableText blocks={curretBlog.body} />
+        <PortableText blocks={curretBlog?.body} />
       </p>
       <div className={styles.metaInfo}>
         <span>Abhishek Kumar Pandey</span>
-        <span>Pulished at: {formatDate(curretBlog.publishedAt)}</span>
+        <span>Pulished at: {formatDate(curretBlog?.publishedAt)}</span>
       </div>
     </div>
   );
