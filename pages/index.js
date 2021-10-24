@@ -1,20 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { sanityClient } from "../lib/sanity";
-
 import Content from "../components/content";
 import { ContactMe } from "../components/ContactMe";
-import Navbar from "../components/Navbar";
-import { Footer } from "../components/Footer";
-
-const postsQuery = `*[_type=="post"]{
-  _id,
-  title,
-  slug,
-  author,
-  body
-}`;
 
 export default function Home() {
   return (
@@ -25,14 +10,4 @@ export default function Home() {
       <div className="gradient"></div>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const posts = await sanityClient.fetch(postsQuery);
-  console.log("postws", posts);
-  return {
-    props: {
-      data: [],
-    },
-  };
 }

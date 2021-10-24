@@ -1,0 +1,31 @@
+.posts {
+  margin-top: 15px;
+}
+
+.post {
+  width: 600px;
+  min-height: 100px;
+  background-color: var(--plum);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 15px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.post p {
+  text-align: left;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 20px;
+  color: aqua;
+}
+
+.body {
+  font-size: 12px;
+}

@@ -107,6 +107,7 @@ nav {
   font-family: var(--mono);
   font-size: 80%;
   padding: 1rem;
+  margin-bottom: 15px;
 }
 
 nav h1 a {
