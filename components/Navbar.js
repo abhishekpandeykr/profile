@@ -25,11 +25,13 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link href="/about">
+            <a href="#">About</a>
+          </Link>
         </li>
-        <li>
+        {/* <li>
           <a href="#">Contact</a>
-        </li>
+        </li> */}
         <li>
           <a href={SocialLinks.linkedin} target="_blank" rel="noreferrer">
             {" "}
