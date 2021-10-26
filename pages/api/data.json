@@ -1,0 +1,18 @@
+{
+  "aboutMe": {
+    "title": "About Abhishek Pandey",
+    "summary": "Versatile Front End Engineer with half decade of Experience Designing and building CMS Applications for Financial Sectors and Multimedia Houses. Proficient with extensive Knowledge of Frontend and CMS Frameworks. Notable Achievements Include Creating an Image Editor and Improving the Performance of CMS application by 60%.",
+    "technologies": [
+      "Snowpack",
+      "Webpack",
+      "Angular(v4+)",
+      "AngularJS",
+      "React JS",
+      "Svelte JS",
+      "Javascript",
+      "Typescript",
+      "HTML",
+      "CSS"
+    ]
+  }
+}

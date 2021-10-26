@@ -19,7 +19,7 @@ const Blog = ({ posts }) => {
 
 export default Blog;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const posts = await sanityClient.fetch(postsQuery);
   return {
     props: {
