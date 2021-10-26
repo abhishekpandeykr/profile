@@ -30,7 +30,8 @@ const About = ({ res }) => {
 export default About;
 
 export async function getStaticProps() {
-  const data = await fetch("http://localhost:3000/api/about-me");
+  const URL = process.env.API_END_POINT;
+  const data = await fetch(`${URL}/api/about-me`);
   const res = await data.json();
   return {
     props: {

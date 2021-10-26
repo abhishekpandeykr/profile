@@ -23,7 +23,7 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
-    "eslint": "8.0.1",
+    "eslint": "^8.1.0",
     "eslint-config-next": "11.1.2"
   }
 }

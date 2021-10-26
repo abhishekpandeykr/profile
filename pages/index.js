@@ -1,7 +1,7 @@
 import Content from "../components/content";
 import { ContactMe } from "../components/ContactMe";
 import Head from "next/head";
-import ProjectLayout from "../components/ProjectLayout";
+// import ProjectLayout from "../components/ProjectLayout";
 
 export default function Home() {
   return (
