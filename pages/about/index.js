@@ -1,21 +1,20 @@
 import styles from "./about.module.css";
 import Image from "next/image";
 const About = ({ res }) => {
-  console.log("props is", res);
-  const { title, summary, technologies } = res.data?.aboutMe;
+  const aboutMe = res?.aboutMe;
   return (
     <>
       <div className="gradient" />
       <div className={styles.about}>
         <section>
-          <h2>{title}</h2>
+          <h2>{aboutMe?.title}</h2>
           <article>
             <div className={styles.profile}>
               <h3>Summary</h3>
-              <p className={styles.box}>{summary}</p>
+              <p className={styles.box}>{aboutMe?.summary}</p>
               <h4>Technologies which I'm Comfortable At</h4>
               <ul>
-                {technologies.map((tech, idx) => (
+                {aboutMe?.technologies.map((tech, idx) => (
                   <li key={idx}>{tech}</li>
                 ))}
               </ul>

@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
       <Content />
       <div className="gradient"></div>
-      <ProjectLayout />
-      <div className="gradient"></div>
+      {/* <ProjectLayout />
+      <div className="gradient"></div> */}
       <ContactMe />
       <div className="gradient"></div>
     </div>
