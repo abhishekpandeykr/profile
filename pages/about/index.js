@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
 import Image from "next/image";
+import { server } from "../../config";
 const About = ({ res }) => {
   const aboutMe = res?.aboutMe;
   return (
@@ -31,7 +32,8 @@ export default About;
 
 export async function getStaticProps() {
   const URL = process.env.API_END_POINT;
-  const data = await fetch(`${URL}/api/about-me`);
+  console.log("Server is", server);
+  const data = await fetch(`${server}/api/about-me`);
   const res = await data.json();
   return {
     props: {
