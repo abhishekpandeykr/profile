@@ -1,9 +1,8 @@
 import styles from "./about.module.css";
 import Image from "next/image";
 import { server } from "../../config";
-import data from "../api/data.json";
-const About = () => {
-  const aboutMe = data?.aboutMe;
+const About = ({ res }) => {
+  const aboutMe = res?.aboutMe;
   return (
     <>
       <div className="gradient" />
@@ -31,14 +30,12 @@ const About = () => {
 
 export default About;
 
-// export async function getStaticProps() {
-//   const URL = process.env.API_END_POINT;
-//   console.log("Server is", server);
-//   const data = await fetch(`${URL}/api/about-me`);
-//   const res = await data.json();
-//   return {
-//     props: {
-//       res,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const data = await fetch(`${server}/api/about-me`);
+  const res = await data.json();
+  return {
+    props: {
+      res,
+    },
+  };
+}
