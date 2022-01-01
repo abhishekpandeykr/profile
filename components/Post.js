@@ -3,7 +3,6 @@ import styles from "./Post.module.css";
 import Link from "next/link";
 
 const Post = (post) => {
-  console.log("post is post", post);
   const val = post.slug.current;
   return (
     <div className={styles.post}>

@@ -1,5 +1,6 @@
 import { sanityClient, PortableText } from "../../lib/sanity";
 import styles from "./style.module.css";
+import Head from "next/head";
 
 const blogQuery = `*[_type=="post" && slug.current == $slug][0]{
     title,
@@ -10,12 +11,23 @@ const blogQuery = `*[_type=="post" && slug.current == $slug][0]{
 const formatDate = (date) => {
   if (date) {
     const newDate = new Date(date.toString());
-    return `${newDate.getDate()}/${newDate.getMonth()}/${newDate.getFullYear()}`;
+    let day = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    if (day < 10) {
+      day = `0${day}`;
+    }
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    return `${day}/${month}/${newDate.getFullYear()}`;
   }
 };
 export default function PostById({ curretBlog }) {
   return (
     <div className={styles.singlePost}>
+      <Head>
+        <title>{curretBlog?.title}</title>
+      </Head>
       <h3 className={styles.title}>{curretBlog?.title}</h3>
       <p className={styles.body}>
         <PortableText blocks={curretBlog?.body} />
