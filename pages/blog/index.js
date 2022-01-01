@@ -6,6 +6,7 @@ const postsQuery = `*[_type=="post"]{
   _id,
   author,
   title,
+  subTitle,
   slug,
   body
 }`;

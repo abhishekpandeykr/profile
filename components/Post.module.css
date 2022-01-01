@@ -1,9 +1,15 @@
 .posts {
   margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .post {
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 90%;
   min-height: 100px;
   background-color: var(--plum);
   color: var(--white);
@@ -27,5 +33,5 @@
 }
 
 .body {
-  font-size: 12px;
+  font-size: 15px;
 }
