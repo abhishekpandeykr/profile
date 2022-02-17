@@ -1,6 +1,7 @@
 import { sanityClient, PortableText } from "../../lib/sanity";
 import styles from "./style.module.css";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const blogQuery = `*[_type=="post" && slug.current == $slug][0]{
     title,
@@ -23,6 +24,20 @@ const formatDate = (date) => {
   }
 };
 export default function PostById({ curretBlog }) {
+  useEffect(() => {
+    // load the disqus script
+    const disqus_config = function () {
+      this.page.url = `https://abhishek-pandey.me/blog/${curretBlog.slug.current}`;
+      this.page.identifier = curretBlog.slug.current;
+    };
+    (function () {
+      var d = document,
+        s = d.createElement("script");
+      s.src = "https://abhishek-pandey-me.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  });
   return (
     <div className={styles.singlePost}>
       <Head>
@@ -36,6 +51,9 @@ export default function PostById({ curretBlog }) {
         <span>Abhishek Kumar Pandey</span>
         <span>Pulished at: {formatDate(curretBlog?.publishedAt)}</span>
       </div>
+      <footer>
+        <div id="disqus_thread"></div>
+      </footer>
     </div>
   );
 }
